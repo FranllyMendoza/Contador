@@ -1,7 +1,62 @@
 ﻿@page "/"
 
-<h1>Hello, world!</h1>
+<style>
+    h1{
+        background-color:chocolate;
+    }
+    h2 {
+        border :3px solid purple;
+        padding:30px;
+        color: black;
+    }
+    
 
-Welcome to your new app.
+</style>
+
+<h1><strong>welcome to my contador!</strong></h1>
+
+
+<h2><strong>contador de 1 en 1</strong></h2>
+
+<p>Current count: @conta</p>
+
+<button class="btn btn-primary" @onclick="contar">Contador</button>
+
+<h2><strong>contador de 3 en 3 </strong></h2>
+
+<p>Current count: @conta2</p>
+
+<button class="btn btn-primary" @onclick="contar2">Contador</button>
+
+<h2><strong>contador de 7 en 7 </strong></h2>
+
+<p>Current count: @conta3</p>
+
+<button class="btn btn-primary" @onclick="contar3">Contador</button>
+
+@code {
+
+    private int conta = 0;
+    private int conta2 = 0;
+    private int conta3 = 0;
+
+    private void contar()
+    {
+        conta++;
+    }
+
+    private void contar2()
+    {
+        conta2 += 3;
+    }
+    private void contar3()
+    {
+        conta3 += 7;
+    }
+
+}
+
+
+
 
 <SurveyPrompt Title="How is Blazor working for you?" />
